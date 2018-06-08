@@ -4,7 +4,9 @@
 
 from nltk.corpus import wordnet as wn
 
-print(wn.synsets('automobile'))
+print("Synsets: {}".format(wn.synsets('automobile')))
 
 for synset in wn.synsets('automobile'):
-	print(synset.lemma_names())
+	print("Lemma names: {}".format(synset.lemma_names()))
+
+print("Definition: {}".format(wn.synset('automobile.v.01').definition()))
