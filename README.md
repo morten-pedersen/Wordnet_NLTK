@@ -7,7 +7,7 @@ GUI browser:
 nltk.app.wordnet()
 
 '''
-hypernym = definitions above word / superclass
+hypernym = definitions above word / superclass, hypernym_paths()
 hyponym = definitions below word / subclass
 meronym = items to their components, part_meronyms(), substance_meronyms(), member_meronyms()
 holonym = things they are contained in
