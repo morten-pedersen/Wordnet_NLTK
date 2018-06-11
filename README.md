@@ -8,6 +8,10 @@ help(wn) for help.
 GUI browser:
 nltk.app.wordnet()
 
+
+
+
+
 **synsets()**: lists synsets of a word. Example: 
 
 
@@ -38,6 +42,12 @@ Can have relations between them, using derivationally_related_forms(), pertainym
 
 
 **hyponyms()** = definitions below word / subclass
+
+
+**hypernym_paths()**: lists the paths of the synset to its highest hypernym. Callable from synset.
+
+
+**root_hypernyms()**: lists the highest hypernym of the synset. Callable from synset. 
 
 
 **meronym** = lists items that are components to this word, part_meronyms(), substance_meronyms(), member_meronyms()
@@ -75,14 +85,25 @@ using the synset of the words you want to compare:
 `forest = wn.synset('forest.n.01')
 `
 
+
 `tree.path_similarity(forest)
 `
 
+
 or
+
 
 `
 wn.synset('tree.n.01').path_similarity(wn.synset('forest.n.01'))
 `
+
+
+**dir()**: shows lexical relations and other methods on a synset. Example:
+
+
+`dir(wn.synset('tree.n.01'))`
+
+
 
 
 We are interested in the Norwegian lemmas of the English word, which we can access by using either of the following:
@@ -103,4 +124,9 @@ or access them from Norwegian:
 
 `wn.lemmas('hund', lang = 'nob')
 `
+
+Resources:
+
+http://compling.hss.ntu.edu.sg/omw/
+https://www.nb.no/forskning/sprakbanken
 
