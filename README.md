@@ -125,8 +125,15 @@ or access them from Norwegian:
 `wn.lemmas('hund', lang = 'nob')
 `
 
+
+Språkbanken has a word net consisting of 50,000 synsets (in both bokmål and nynorsk) at 
+Norsk Ordvev: https://www.nb.no/sprakbanken/show?serial=oai%3Anb.no%3Asbr-27&lang=nb (updated Feb 2016)
+
+
 Resources:
 
 http://compling.hss.ntu.edu.sg/omw/
+
+
 https://www.nb.no/forskning/sprakbanken
 
