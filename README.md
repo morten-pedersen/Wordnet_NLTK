@@ -9,6 +9,8 @@ GUI browser:
 nltk.app.wordnet()
 
 **synsets()**: lists synsets of a word. Example: 
+
+
 `wn.synsets('dog')` 
 
 
@@ -49,6 +51,8 @@ Can have relations between them, using derivationally_related_forms(), pertainym
 
 **antonyms()** = lists word(s) with opposite meanings. Has to be called from lemmas, and specified which item in index
 to list antonyms from, for example:
+
+
 `walk = wn.synset('walk.v.01')
 `
 
@@ -63,6 +67,8 @@ to list antonyms from, for example:
 
 **path_similarity()** = score between 0 and 1 on shortest path between concepts in hypernym hierarchy. Needs to be called
 using two variables representing the synsets you want to compare:
+
+
 `tree = wn.synset('tree.n.01')`
 
 
@@ -72,12 +78,18 @@ using two variables representing the synsets you want to compare:
 `tree.path_similarity(forest)
 `
 We are interested in the Norwegian lemmas of the English word, which we can access by using either of the following:
+
+
 `wn.lemmas(word, lang = 'nob')
 `
 
 `wn.synset('dog.n.01').lemma_names('nob')
 `
+
+
 or access them from Norwegian:
+
+
 `wn.synsets('hund', lang = 'nob')
 `
 
