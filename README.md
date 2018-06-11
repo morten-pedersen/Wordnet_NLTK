@@ -6,7 +6,7 @@ help(wn)
 GUI browser:
 nltk.app.wordnet()
 
-
+Synset: a set of synonyms that share a common meaning
 hypernym = definitions above word / superclass, hypernym_paths()
 hyponym = definitions below word / subclass
 meronym = items to their components, part_meronyms(), substance_meronyms(), member_meronyms()
@@ -15,6 +15,7 @@ entailments = walking entails stepping
 antonym = opposite
 dir()
 path_similarity() = score between 0 and 1 on shortest path between concepts in hypernym hierarchy
+
 
 
 NLTK WordNet uses the method synsets(), where the desired word is entered as an argument, for example wn.synsets('dog')
