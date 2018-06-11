@@ -8,22 +8,57 @@ help(wn) for help.
 GUI browser:
 nltk.app.wordnet()
 
+**synsets()**: lists synsets of a word. Example: 
+`wn.synsets('dog')` 
+
+
 **synset()**: a set of synonyms that share a common meaning. A synset in NLTK is the "ID" for each word, and used to
-access most other methods
-**lemmas()** can be called from synset. Lists words of the same meaning, with their synset and lemma names
-**lemma_names()**: lists lemma names of a synset
+access most other methods. 
+
+
+**lemmas()** Lists words of the same meaning, with their synset and lemma names. Can be called from synset. 
+
+
+**lemma_names()**: lists lemma names of a synset. 
 Can have relations between them, using derivationally_related_forms(), pertainyms() and antonyms()
+
+
+**definition()**: lists definition of a synset. Called directly from synset
+
+
+**name()** lists name of synset. Called from synset.
+
+
+**examples()** lists examples of a synset. Called from synset.
+
+
 **hypernyms()** = definitions above word / superclass, hypernym_paths()
+
+
 **hyponyms()** = definitions below word / subclass
+
+
 **meronym** = lists items that are components to this word, part_meronyms(), substance_meronyms(), member_meronyms()
+
+
 **holonym** = reverse to meronym: part_holonyms(), substance_holonyms(), member_holonyms()
+
+
 **entailments()** = walking entails stepping
+
+
 **antonyms()** = lists word(s) with opposite meanings. Has to be called from lemmas, and specified which item in index
 to list antonyms from, for example:
 `walk = wn.synset('walk.v.01')`
 `walk.lemmas()[0].antonyms()`
+
+
 **pertainyms()**: lists words pertaining to the word (belonging to). Needs to be called in same way as antonyms()
+
+
 **derivationally_related_forms()**: lists derivationally related forms. Needs to be called in same way as antonyms()
+
+
 **path_similarity()** = score between 0 and 1 on shortest path between concepts in hypernym hierarchy. Needs to be called
 using two variables representing the synsets you want to compare:
 `tree = wn.synset('tree.n.01')
