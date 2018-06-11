@@ -50,6 +50,9 @@ Can have relations between them, using derivationally_related_forms(), pertainym
 **root_hypernyms()**: lists the highest hypernym of the synset. Callable from synset. 
 
 
+**hypernym_distances()**: lists distance between hypernyms from a synset. Callable from synset.
+
+
 **meronym** = lists items that are components to this word, part_meronyms(), substance_meronyms(), member_meronyms()
 
 
