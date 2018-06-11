@@ -20,7 +20,7 @@ access most other methods.
 
 
 **lemma_names()**: lists lemma names of a synset. 
-Can have relations between them, using derivationally_related_forms(), pertainyms() and antonyms()
+Can have relations between them, using derivationally_related_forms(), pertainyms() and antonyms().
 
 
 **definition()**: lists definition of a synset. Called directly from synset
@@ -50,8 +50,10 @@ Can have relations between them, using derivationally_related_forms(), pertainym
 **antonyms()** = lists word(s) with opposite meanings. Has to be called from lemmas, and specified which item in index
 to list antonyms from, for example:
 `walk = wn.synset('walk.v.01')
-walk.lemmas()[0].antonyms()`
+`
 
+`walk.lemmas()[0].antonyms()
+`
 
 **pertainyms()**: lists words pertaining to the word (belonging to). Needs to be called in same way as antonyms()
 
@@ -61,17 +63,24 @@ walk.lemmas()[0].antonyms()`
 
 **path_similarity()** = score between 0 and 1 on shortest path between concepts in hypernym hierarchy. Needs to be called
 using two variables representing the synsets you want to compare:
-``tree = wn.synset('tree.n.01')
-forest = wn.synset('forest.n.01')
-tree.path_similarity(forest)``
+`tree = wn.synset('tree.n.01')`
 
 
+`forest = wn.synset('forest.n.01')
+`
+
+`tree.path_similarity(forest)
+`
 We are interested in the Norwegian lemmas of the English word, which we can access by using either of the following:
 `wn.lemmas(word, lang = 'nob')
-wn.synset('dog.n.01').lemma_names('nob')`
+`
 
+`wn.synset('dog.n.01').lemma_names('nob')
+`
 or access them from Norwegian:
 `wn.synsets('hund', lang = 'nob')
-wn.lemmas('hund', lang = 'nob')`
+`
 
+`wn.lemmas('hund', lang = 'nob')
+`
 
