@@ -66,7 +66,7 @@ to list antonyms from, for example:
 
 
 **path_similarity()** = score between 0 and 1 on shortest path between concepts in hypernym hierarchy. Needs to be called
-using two variables representing the synsets you want to compare:
+using the synset of the words you want to compare:
 
 
 `tree = wn.synset('tree.n.01')`
@@ -77,6 +77,14 @@ using two variables representing the synsets you want to compare:
 
 `tree.path_similarity(forest)
 `
+
+or
+
+`
+wn.synset('tree.n.01').path_similarity(wn.synset('forest.n.01'))
+`
+
+
 We are interested in the Norwegian lemmas of the English word, which we can access by using either of the following:
 
 
