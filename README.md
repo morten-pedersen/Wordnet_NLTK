@@ -49,8 +49,8 @@ Can have relations between them, using derivationally_related_forms(), pertainym
 
 **antonyms()** = lists word(s) with opposite meanings. Has to be called from lemmas, and specified which item in index
 to list antonyms from, for example:
-`walk = wn.synset('walk.v.01')`
-`walk.lemmas()[0].antonyms()`
+`walk = wn.synset('walk.v.01')
+walk.lemmas()[0].antonyms()`
 
 
 **pertainyms()**: lists words pertaining to the word (belonging to). Needs to be called in same way as antonyms()
@@ -61,9 +61,9 @@ to list antonyms from, for example:
 
 **path_similarity()** = score between 0 and 1 on shortest path between concepts in hypernym hierarchy. Needs to be called
 using two variables representing the synsets you want to compare:
-`tree = wn.synset('tree.n.01')
+``tree = wn.synset('tree.n.01')
 forest = wn.synset('forest.n.01')
-tree.path_similarity(forest)`
+tree.path_similarity(forest)``
 
 
 We are interested in the Norwegian lemmas of the English word, which we can access by using either of the following:
