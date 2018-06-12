@@ -9,18 +9,18 @@ def description_of_synsets(word):
 			  "\nNorwegian lemmas: {}".format(synset.lemmas(lang = 'nob')),
 			  "\nDefinition: {}".format(synset.definition()), "\n")
 
-
 # function to list the English synset of a given Norwegian lemma
 def get_english_synset(word):
 	for synset in wn.synsets(word, lang = 'nob'):
-		print(synset, synset.lemma_names(), ": \n", synset.definition(), "\n")
+		print(synset, synset.lemmas(), ": \n", synset.definition(), "\n")
 
 
 def get_hype(word):
 	for synset in wn.synsets(word, lang = 'nob'):
 		syn = synset.hypernyms()
-		for x in range(len(syn)):
+		for y in syn:
 			print("Norwegian word: {}".format(word), "\nEnglish synset: {}".format(synset), "\nHypernym: {}".format(syn),
-		  "\nHypernym in Norwegian: {}".format(x.lemmas('nob')), "\n")
+		  "\nHypernym in Norwegian: {}".format(y.lemmas('nob')), "\n")
 
-get_hype('kjøretøy')
+
+
