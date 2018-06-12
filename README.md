@@ -12,7 +12,7 @@ nltk.app.wordnet()
 
 
 
-**synsets()**: lists synsets of a word. Example: 
+**synsets()**: lists synsets of a word, useful for when the synset is not known. Example: 
 
 
 `wn.synsets('dog')` 
@@ -22,7 +22,7 @@ nltk.app.wordnet()
 access most other methods. 
 
 
-**lemmas()** Lists words of the same meaning, with their synset and lemma names. Can be called from synset. 
+**lemmas()**: Lists words of the same meaning, with their synset and lemma names. Can be called from synset. 
 
 
 **lemma_names()**: lists lemma names of a synset. 
@@ -32,16 +32,16 @@ Can have relations between them, using derivationally_related_forms(), pertainym
 **definition()**: lists definition of a synset. Called directly from synset
 
 
-**name()** lists name of synset. Called from synset.
+**name()**: lists name of synset. Called from synset.
 
 
-**examples()** lists examples of a synset. Called from synset.
+**examples()**: lists examples of a synset. Called from synset.
 
 
-**hypernyms()** = definitions above word / superclass, hypernym_paths()
+**hypernyms()**: definitions above word / superclass, hypernym_paths()
 
 
-**hyponyms()** = definitions below word / subclass
+**hyponyms()**: definitions below word / subclass
 
 
 **hypernym_paths()**: lists the paths of the synset to its highest hypernym. Callable from synset.
@@ -59,24 +59,19 @@ Can have relations between them, using derivationally_related_forms(), pertainym
 `wn.synset('tree.n.01').lowest_common_hypernyms(wn.synset('forest.n.01'))`
 
 
-**min_depth()**:
+**min_depth()**: returns a number of how specific a synset is, meaning how deep the synset is in the hyponym tree
 
 
-
-**max_depth()**:
-
+**meronym**: lists items that are components to this word, part_meronyms(), substance_meronyms(), member_meronyms()
 
 
-**meronym** = lists items that are components to this word, part_meronyms(), substance_meronyms(), member_meronyms()
+**holonym**: reverse to meronym: part_holonyms(), substance_holonyms(), member_holonyms()
 
 
-**holonym** = reverse to meronym: part_holonyms(), substance_holonyms(), member_holonyms()
+**entailments()**: walking entails stepping
 
 
-**entailments()** = walking entails stepping
-
-
-**antonyms()** = lists word(s) with opposite meanings. Has to be called from lemmas, and specified which item in index
+**antonyms()**: lists word(s) with opposite meanings. Has to be called from lemmas, and specified which item in index
 to list antonyms from, for example:
 
 
@@ -92,7 +87,7 @@ to list antonyms from, for example:
 **derivationally_related_forms()**: lists derivationally related forms. Needs to be called in same way as antonyms()
 
 
-**path_similarity()** = score between 0 and 1 on shortest path between concepts in hypernym hierarchy. Needs to be called
+**path_similarity()**: score between 0 and 1 on shortest path between concepts in hypernym hierarchy. Needs to be called
 using the synset of the words you want to compare:
 
 
