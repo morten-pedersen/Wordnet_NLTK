@@ -53,6 +53,20 @@ Can have relations between them, using derivationally_related_forms(), pertainym
 **hypernym_distances()**: lists distance between hypernyms from a synset. Callable from synset.
 
 
+**lowest_common_hypernyms()**: lists the lowest common hypernym between two synsets. Example:
+
+
+`wn.synset('tree.n.01').lowest_common_hypernyms(wn.synset('forest.n.01'))`
+
+
+**min_depth()**:
+
+
+
+**max_depth()**:
+
+
+
 **meronym** = lists items that are components to this word, part_meronyms(), substance_meronyms(), member_meronyms()
 
 
