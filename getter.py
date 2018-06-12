@@ -10,9 +10,14 @@ def description_of_synsets(word):
 			  "\nDefinition: {}".format(synset.definition()), "\n")
 
 w = input('Enter a english word: ')
-if w != wn: #hvordan skrive denne setningen?
-    print('Can not find the word')
+#if w != wn.synsets.lemma(): #hvordan skrive denne setningen?
+#def test_dette(word):
+ #   for synset in wn.synsets(word):
+
+#try:
 description_of_synsets(w)
+#except Exception as e:
+#    print('Can not find the word')
 
 # function to list the English synset of a given Norwegian lemma
 def get_norwegian_lemma(word):

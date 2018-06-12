@@ -13,7 +13,7 @@ ex = mcar.examples()
 hype = mcar.hypernyms()
 hypo = mcar.hyponyms()
 
-#print(syn, "\n", name, "\n", lena, "\n", lem, "\n", defi, "\n", ex, "\n", hype, "\n", hypo)
+print(syn, "\n", name, "\n", lena, "\n", lem, "\n", defi, "\n", ex, "\n", hype, "\n", hypo)
 
 
 
@@ -63,8 +63,10 @@ print(wn.lemma('horizontal.a.01.horizontal').antonyms())
 hu = wn.synset('dog.n.01').lemmas('nob')
 print(sorted(hu))
 
-'''
 
 
 person = input('Enter your name: ')
 print('Hello ', person, '!')
+'''
+
+
