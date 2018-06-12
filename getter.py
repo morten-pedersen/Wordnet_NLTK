@@ -9,7 +9,12 @@ def description_of_synsets(word):
 			  "\nNorwegian lemmas: {}".format(synset.lemmas(lang = 'nob')),
 			  "\nDefinition: {}".format(synset.definition()), "\n")
 
-description_of_synsets('dog')
+
+w = input('Enter a word: ')
+print('your word is ', w, '!', sep='')
+
+
+description_of_synsets(w)
 
 # function to list the English synset of a given Norwegian lemma
 def get_norwegian_lemma(word):

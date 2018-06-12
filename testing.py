@@ -59,6 +59,12 @@ ent =wn.synset('eat.v.01').entailments()
 print(ent)
 
 print(wn.lemma('horizontal.a.01.horizontal').antonyms())
+
+hu = wn.synset('dog.n.01').lemmas('nob')
+print(sorted(hu))
+
 '''
 
 
+person = input('Enter your name: ')
+print('Hello ', person, '!', sep='')
