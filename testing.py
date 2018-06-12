@@ -67,4 +67,4 @@ print(sorted(hu))
 
 
 person = input('Enter your name: ')
-print('Hello ', person, '!', sep='')
+print('Hello ', person, '!')
