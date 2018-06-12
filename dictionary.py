@@ -3,7 +3,7 @@ from nltk.corpus import wordnet as wn
 
 
 # function to list out synsets of a chosen word, their lemma_names and the synsets' definitions
-w = input('Enter a english word: ')
+w = input('Enter a English word: ')
 
 def description_of_synsets(word):
     for synset in wn.synsets(word):

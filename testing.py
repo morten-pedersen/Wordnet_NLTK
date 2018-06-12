@@ -13,9 +13,7 @@ ex = mcar.examples()
 hype = mcar.hypernyms()
 hypo = mcar.hyponyms()
 
-print(syn, "\n", name, "\n", lena, "\n", lem, "\n", defi, "\n", ex, "\n", hype, "\n", hypo)
-
-
+# print("synset:",syn, "\nname:", name, "\nlemma name:", lena, "\nlemmas:", lem, "\ndefinition:", defi, "\nexample:", ex, "\nhypernym:", hype, "\nhyponym:", hypo)
 
 
 '''
@@ -68,5 +66,16 @@ print(sorted(hu))
 person = input('Enter your name: ')
 print('Hello ', person, '!')
 '''
+hu = wn.synset('dog.n.01').lemmas('nob')
+# print(sorted(hu))
+n = input('Enter a Norwegian word: ')
 
 
+def get_english_synset(word):
+    for synset in wn.synsets(word, lang='nob'):
+        noblem = synset.lemmas('nob')
+        print(synset,"\nThe norwegian lemmas are: ", noblem, '\nThe English translation is: ', synset.lemma_names(), ": \nThe hypernym is: ", synset.hypernyms(),
+          "\nThe hyponym is: ", synset.hyponyms())
+
+
+get_english_synset(n)
