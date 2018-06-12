@@ -20,8 +20,14 @@ description_of_synsets(w)
 #    print('Can not find the word')
 
 # function to list the English synset of a given Norwegian lemma
-def get_norwegian_lemma(word):
+def get_english_synset(word):
 	for synset in wn.synsets(word, lang='nob'):
 		print(synset, synset.lemma_names(), ": \n", synset.definition(), "\n")
 
-#get_norwegian_lemma('knask')
+
+
+def get_hype(word):
+    for synset in wn.synsets(word, lang = 'nob'):
+        syn = synset.hypernyms()[0]
+        print("Norwegian word: {}".format(word), "\nEnglish synset: {}".format(synset), "\nHypernym: {}".format(syn),
+              "\nHypernym in Norwegian: {}".format(syn.lemmas('nob')), "\n")
