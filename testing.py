@@ -16,10 +16,10 @@ hypo = mcar.hyponyms()
 #print(syn, "\n", name, "\n", lena, "\n", lem, "\n", defi, "\n", ex, "\n", hype, "\n", hypo)
 
 
-motorcar = wn.synset('car.n.01')
+
 
 '''
-types_of_motorcar = motorcar.hyponyms()
+types_of_motorcar = mcar.hyponyms()
 #types_of_motorcar[]
 
 for synset in types_of_motorcar:
@@ -29,8 +29,8 @@ for synset in types_of_motorcar:
 
 '''
 '''
-print(motorcar.hypernyms())
-paths = motorcar.hypernym_paths()
+print(mcar.hypernyms())
+paths = mcar.hypernym_paths()
 print(len(paths))
 for synset in paths[0]: #paths[1]
     print(synset.name())
