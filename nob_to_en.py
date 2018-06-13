@@ -5,19 +5,21 @@ from nltk.corpus import wordnet as wn
 
 n = input('Enter a Norwegian word: ')
 
-
-def from_nob_to_en(word):
+#takes a norwegian word, translates it to english, get the english hypernyms, then the norwegian hypernyms
+def get_norwegian_hypernym(word):
     for synset in wn.synsets(word, lang='nob'):
-        noblem = synset.lemmas('nob')
-        #print(synset,"\nThe norwegian lemmas are: ", noblem, '\nThe English translation is: ', synset.lemma_names(), ": \nThe hypernym is: ", synset.hypernyms(),"\nThe hyponym is: ", synset.hyponyms(), '\n')
-        synhyp = synset.hypernyms()
-        print("\nThe norwegian lemmas are: ", noblem," \nThe hypernym is: ",synset.hypernyms())
+        synhype = synset.hypernyms()
+        for nobhype in synhype:
+            print('\nThe English translation is: ', synset.lemma_names(), " \nThe English hypernym is: ",synset.hypernyms()," \nThe Norwegian hypernym is: ", nobhype.lemmas('nob'))
+
+#takes a norwegian word, translates it to english, get the english hyponyms, then the norwegian hyponyms
+def get_norwegian_hyponym(word):
+    for synset in wn.synsets(word, lang='nob'):
+        synhypo = synset.hyponyms()
+        for nobhypo in synhypo:
+            print('\nThe English translation is: ', synset.lemma_names(), " \nThe English hyponym is: ",synset.hyponyms()," \nThe Norwegian hyponym is: ", nobhypo.lemmas('nob'))
 
 
-from_nob_to_en(n)
 
-
-hypo = wn.synset('ferry.n.01').lemmas('nob')
-#print(hypo)
-hype = wn.synset('vessel.n.02').lemmas('nob')
-#print(hype)
+get_norwegian_hyponym(n)
+get_norwegian_hypernym(n)

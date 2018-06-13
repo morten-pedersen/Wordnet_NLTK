@@ -1,0 +1,6 @@
+
+*.xml
+*.manifest
+*.bat
+*.pth
+venv
