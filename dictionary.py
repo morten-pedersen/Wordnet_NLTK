@@ -11,8 +11,6 @@ def description_of_synsets(word):
                   "\nNorwegian lemmas: {}".format(synset.lemmas(lang='nob')),
                   "\nDefinition: {}".format(synset.definition()), "\n")
 
-
-
 if wn.synsets(w):
     description_of_synsets(w)
 else:

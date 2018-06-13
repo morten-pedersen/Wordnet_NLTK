@@ -25,8 +25,8 @@ def get_norwegian_hyponym(word):
             print(" \nThe English hyponym is: ",hypo," \nThe Norwegian hyponym is: ", hypo.lemmas('nob'), '\n')
 
 
-
+#print only if the word is in the nob dictionary
 if wn.synsets(n):
-    print('Did not find the word: ', n)
+    print('Did not find "', n, '" in the Norwegian wordnet')
 else:
     get_translation(n), get_norwegian_hyponym(n), get_norwegian_hypernym(n)
