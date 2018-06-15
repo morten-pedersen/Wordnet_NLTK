@@ -15,3 +15,21 @@ if wn.synsets(w):
     description_of_synsets(w)
 else:
     print('Did not find the word: ', w)
+
+
+'''
+#dictionary from sentistrength
+file=(open('Dictionary.txt','r'))
+for line in file:
+   print(line)
+
+with open('Dictionary.txt', 'r') as file1:
+    with open('some_file_2.txt', 'r') as file2:
+        same = set(file1).intersection(file2)
+
+same.discard('\n')
+
+with open('some_output_file.txt', 'w') as file_out:
+    for line in same:
+        file_out.write(line)
+'''

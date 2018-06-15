@@ -21,7 +21,7 @@ file.close()
 file = open('SentimentLookupTable.csv', 'r')
 #print (file.read(5))
 #print (file.readline())
-print (file.readlines(4))
+#print (file.readlines())
 
 #for line in file:
  #   print(line)
