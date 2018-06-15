@@ -7,6 +7,7 @@ mode:
 ‘a’ – Appending mode, which is used to add new data to the end of the file; that is new information is automatically amended to the end
 ‘r+’ – Special read and write mode, which is used to handle both actions when working with a file
 '''
+'''
 
 file = open('testfile.txt','w')
 
@@ -16,11 +17,11 @@ file.write('\nand this is another line.')
 file.write('\nWhy? Because we can.')
 
 file.close()
-
-file = open('testfile.txt', 'r')
+'''
+file = open('SentimentLookupTable.csv', 'r')
 #print (file.read(5))
 #print (file.readline())
-#print (file.readlines(2))
+print (file.readlines(4))
 
 #for line in file:
  #   print(line)
